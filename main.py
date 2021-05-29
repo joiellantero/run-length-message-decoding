@@ -6,7 +6,7 @@ class Node:
 
 def display(head):
     current = head
-    print('encoded message (linked list form):')
+    # print('encoded message (linked list form):')
     while current is not None:
         print(current.data, end=" -> ")
         current = current.next
@@ -35,7 +35,7 @@ def generate_linked_list(text):
 
     head = None
     head = converter(text, head)
-    display(head)
+    # display(head)
     return head
 
 
@@ -54,10 +54,10 @@ def decode(com_msg, head):
             uncom_msg += temp
         parent = parent.next
 
-    c = int(len(uncom_msg)/len(com_msg))
+    c = round(len(uncom_msg)/len(com_msg))
     res.append(uncom_msg)
     res.append(c)
-    print('decoded message (string form):')
+    # print('decoded message (string form):')
     return res
 
 if __name__ == '__main__':
