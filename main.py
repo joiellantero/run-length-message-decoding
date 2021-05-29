@@ -1,3 +1,5 @@
+import math
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -39,6 +41,11 @@ def generate_linked_list(text):
     return head
 
 
+def round_half_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return int(math.floor(n * multiplier + 0.5) / multiplier)
+
+
 def decode(com_msg, head):
     parent = head
     uncom_msg = ""
@@ -54,7 +61,8 @@ def decode(com_msg, head):
             uncom_msg += temp
         parent = parent.next
 
-    c = round(len(uncom_msg)/len(com_msg))
+    print(len(uncom_msg)/len(com_msg), com_msg, '-> ', uncom_msg)
+    c = round_half_up(len(uncom_msg)/len(com_msg))
     res.append(uncom_msg)
     res.append(c)
     # print('decoded message (string form):')
