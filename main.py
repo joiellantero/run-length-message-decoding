@@ -1,5 +1,6 @@
 import math
 
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -61,12 +62,13 @@ def decode(com_msg, head):
             uncom_msg += temp
         parent = parent.next
 
-    print(len(uncom_msg)/len(com_msg), com_msg, '-> ', uncom_msg)
+    # print(len(uncom_msg)/len(com_msg), com_msg, '-> ', uncom_msg)
     c = round_half_up(len(uncom_msg)/len(com_msg))
     res.append(uncom_msg)
     res.append(c)
     # print('decoded message (string form):')
     return res
+
 
 if __name__ == '__main__':
     n = int(input())
