@@ -39,21 +39,24 @@ def generate_linked_list(text):
     return head
 
 
-def decode(head):
+def decode(com_msg, head):
     parent = head
-    res = ""
+    uncom_msg = ""
+    res = []
 
     while (parent != None):
-        count = 0
         temp = parent.data
         if temp.isdigit():
             char = parent.next
             for i in range(0, int(temp)-1):
-                res += char.data
+                uncom_msg += char.data
         else:
-            res += temp
+            uncom_msg += temp
         parent = parent.next
 
+    c = int(len(uncom_msg)/len(com_msg))
+    res.append(uncom_msg)
+    res.append(c)
     print('decoded message (string form):')
     return res
 
@@ -63,4 +66,5 @@ if __name__ == '__main__':
     for i in range(n):
         enc_list.append(input())
     for item in enc_list:
-        print(decode(generate_linked_list(item)))
+        res = decode(item, generate_linked_list(item))
+        print(res[1], res[0])
