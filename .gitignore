@@ -1,3 +1,4 @@
 *.pdf
 in*
 out*
+.DS_Store
