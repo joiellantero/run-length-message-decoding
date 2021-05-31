@@ -16,20 +16,21 @@ def display(head):
     print('\n')
 
 
-# similar to isdigit() or isnumeric() methods 
+# similar to isdigit() or isnumeric() methods
 # however, this function extends those methods to be able to check for superscripts and subscripts.
 def is_numeric(data):
     count = 0
     for i in data:
         if ord(i) >= ord('0') and ord(i) <= ord('9'):
-            continue 
+            continue
         else:
             count += 1
     if count > 0:
-        return False 
+        return False
     return True
 
 
+# we convert the strings into linked list for easier access to the numbers and the unicode characters
 def generate_linked_list(text):
     def add(data):
         temp = Node(data)
