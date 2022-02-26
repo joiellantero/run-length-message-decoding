@@ -1,17 +1,15 @@
 # Run Length Message Decoding
 
-# 🚀 Quickstart
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-### 1. Programming Language
+## 🚀 Quickstart
 
-- Programming language used is **Python** with the intention of having less code.
-
-### 2. About the Algorithm
+### 1. About the Algorithm
 
 - Used linked lists to separate the multiplier from the UTF-8 unicode.
 - Used loops and conditions for a straightforward solution to decode the message.
 
-### 3. Running the program
+### 2. Running the program
 
 - The usual
 
@@ -31,6 +29,11 @@
     $ python3 main.py < input.txt > output.txt
     ```
 
-### 4. Author
+## 👨‍💻 Author
 
-- Joie Angelo Llantero
+- [Joie Llantero](https://github.com/joiellantero)
+
+
+## 📄 License 
+
+- [MIT license](http://opensource.org/licenses/mit-license.php)
